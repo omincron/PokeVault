@@ -10,7 +10,7 @@ export default function RarityBadge({ rarity, isShiny }) {
       </span>
       {isShiny && (
         <span className="shiny-badge">
-          ✨ SHINY
+          SHINY
         </span>
       )}
     </div>

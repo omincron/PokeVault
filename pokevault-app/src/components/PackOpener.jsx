@@ -56,7 +56,7 @@ export default function PackOpener({ onPackOpened }) {
   return (
     <div className="pack-opener">
       <div className="pack-header">
-        <h1>🎴 PokéVault</h1>
+        <h1>PokéVault</h1>
         <p className="tagline">Open packs. Collect Pokémon. Chase shinies.</p>
       </div>
 
@@ -67,7 +67,7 @@ export default function PackOpener({ onPackOpened }) {
             onClick={openPack}
             disabled={isOpening}
           >
-            {isOpening ? 'Opening...' : '✨ Open Pack'}
+            {isOpening ? 'Opening...' : 'Open Pack'}
           </button>
           <p className="pack-info">Each pack contains 5 random Pokémon!</p>
         </div>
@@ -107,7 +107,7 @@ export default function PackOpener({ onPackOpened }) {
                       />
                       {index === revealedIndex && !allRevealed && (
                         <div className="click-hint">
-                          👆 Click to reveal next card
+                          Click to reveal next card
                         </div>
                       )}
                     </div>
@@ -130,7 +130,7 @@ export default function PackOpener({ onPackOpened }) {
                     className="start-reveal-button"
                     onClick={revealNextCard}
                   >
-                    🎁 Reveal First Card
+                    Reveal First Card
                   </button>
                 </div>
               )}
@@ -141,7 +141,7 @@ export default function PackOpener({ onPackOpened }) {
                     className="add-to-collection-button"
                     onClick={addToCollection}
                   >
-                    ➕ Add to Collection
+                    Add to Collection
                   </button>
                   <button 
                     className="open-another-button"
@@ -150,7 +150,7 @@ export default function PackOpener({ onPackOpened }) {
                       setTimeout(openPack, 100);
                     }}
                   >
-                    🔄 Open Another Pack
+                    Open Another Pack
                   </button>
                 </div>
               )}

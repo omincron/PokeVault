@@ -41,7 +41,7 @@ export default function Collection({ collection }) {
   return (
     <div className="collection">
       <div className="collection-header">
-        <h2>📚 Your Collection</h2>
+        <h2>Your Collection</h2>
         <div className="collection-stats">
           <div className="stat">
             <span className="stat-value">{stats.total}</span>
@@ -49,11 +49,11 @@ export default function Collection({ collection }) {
           </div>
           <div className="stat">
             <span className="stat-value shiny-text">{stats.shiny}</span>
-            <span className="stat-label">✨ Shinies</span>
+            <span className="stat-label">Shinies</span>
           </div>
           <div className="stat">
             <span className="stat-value legendary-text">{stats.legendary}</span>
-            <span className="stat-label">⭐ Legendary</span>
+            <span className="stat-label">Legendary</span>
           </div>
         </div>
       </div>
