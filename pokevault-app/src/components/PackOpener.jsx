@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Sparkles } from 'lucide-react';
 import { generatePack } from '../utils/packGenerator';
 import { usePokemonCache } from '../hooks/usePokemonCache';
 import Card from './Card';
@@ -112,7 +113,9 @@ export default function PackOpener({ onPackOpened }) {
                 {!allRevealed && revealedIndex >= 0 && (
                   <div className="next-card-teaser" onClick={revealNextCard}>
                     <div className="card-back">
-                      <div className="card-back-design">🎴</div>
+                      <div className="card-back-design">
+                        <Sparkles size={48} />
+                      </div>
                       <p>Click to reveal</p>
                     </div>
                   </div>
