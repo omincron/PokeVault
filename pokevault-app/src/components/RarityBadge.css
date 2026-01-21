@@ -1,0 +1,67 @@
+.rarity-badge-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  align-items: flex-start;
+}
+
+.rarity-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.rarity-common {
+  background: linear-gradient(135deg, #9E9E9E, #BDBDBD);
+  color: #fff;
+}
+
+.rarity-rare {
+  background: linear-gradient(135deg, #2196F3, #64B5F6);
+  color: #fff;
+}
+
+.rarity-epic {
+  background: linear-gradient(135deg, #9C27B0, #BA68C8);
+  color: #fff;
+}
+
+.rarity-legendary {
+  background: linear-gradient(135deg, #FFD700, #FFE44D);
+  color: #000;
+  animation: legendary-pulse 2s ease-in-out infinite;
+}
+
+@keyframes legendary-pulse {
+  0%, 100% {
+    box-shadow: 0 2px 8px rgba(255, 215, 0, 0.4);
+  }
+  50% {
+    box-shadow: 0 2px 16px rgba(255, 215, 0, 0.8);
+  }
+}
+
+.shiny-badge {
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.75rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #FF69B4, #FFB6C1);
+  color: #fff;
+  animation: shiny-sparkle 1.5s ease-in-out infinite;
+}
+
+@keyframes shiny-sparkle {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 8px rgba(255, 105, 180, 0.5);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 16px rgba(255, 105, 180, 0.8);
+  }
+}

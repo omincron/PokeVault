@@ -1,0 +1,136 @@
+.card {
+  background: linear-gradient(145deg, #fff, #f5f5f5);
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 3px solid var(--rarity-color, #ccc);
+  min-width: 160px;
+  max-width: 200px;
+  width: 100%;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2),
+              0 0 20px var(--glow-color, rgba(0, 0, 0, 0.1));
+}
+
+.card.shiny {
+  animation: shiny-card 2s ease-in-out infinite;
+  border-width: 4px;
+}
+
+@keyframes shiny-card {
+  0%, 100% {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
+                0 0 20px rgba(255, 105, 180, 0.3);
+  }
+  50% {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2),
+                0 0 40px rgba(255, 105, 180, 0.6);
+  }
+}
+
+.card.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  border: 3px solid #ccc;
+}
+
+.card-spinner {
+  font-size: 1rem;
+  color: #666;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+.card-header {
+  margin-bottom: 1rem;
+}
+
+.card-image-container {
+  position: relative;
+  width: 100%;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+  border-radius: 0.5rem;
+  margin-bottom: 0.75rem;
+  overflow: hidden;
+}
+
+.card-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card-image.loaded {
+  opacity: 1;
+}
+
+.card-info {
+  text-align: center;
+}
+
+.card-name {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  color: #333;
+  text-transform: capitalize;
+}
+
+.card-types {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.type-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+/* Pokémon Type Colors */
+.type-normal { background: #A8A878; }
+.type-fire { background: #F08030; }
+.type-water { background: #6890F0; }
+.type-electric { background: #F8D030; color: #333; }
+.type-grass { background: #78C850; }
+.type-ice { background: #98D8D8; }
+.type-fighting { background: #C03028; }
+.type-poison { background: #A040A0; }
+.type-ground { background: #E0C068; }
+.type-flying { background: #A890F0; }
+.type-psychic { background: #F85888; }
+.type-bug { background: #A8B820; }
+.type-rock { background: #B8A038; }
+.type-ghost { background: #705898; }
+.type-dragon { background: #7038F8; }
+.type-dark { background: #705848; }
+.type-steel { background: #B8B8D0; }
+.type-fairy { background: #EE99AC; }
+
+.card-id {
+  font-size: 0.875rem;
+  color: #999;
+  font-weight: 500;
+}
