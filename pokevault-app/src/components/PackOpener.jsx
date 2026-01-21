@@ -105,11 +105,6 @@ export default function PackOpener({ onPackOpened }) {
                         cardData={card}
                         pokemonData={pokemonDataList[index]}
                       />
-                      {index === revealedIndex && !allRevealed && (
-                        <div className="click-hint">
-                          Click to reveal next card
-                        </div>
-                      )}
                     </div>
                   )
                 ))}
